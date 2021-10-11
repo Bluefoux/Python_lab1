@@ -1,0 +1,38 @@
+
+
+from random import randint
+
+challenger_mode = True
+print('Welcome to Roshambo')
+player = input('Enter Username: ')
+print('Rock beat Scissors, Scissors bet Paper, Paper beat Rock, write End if you do not want to play anymore')
+while challenger_mode:
+    t = ["Rock", "Paper", "Scissors"]
+    computer = t[randint(0,2)]
+    challenger = input('Chose your weapon: ')
+    if challenger == computer:
+        print('Tie')
+    elif challenger == 'Rock':
+        if computer == 'Paper':
+            print('You lose!')
+            print('computer choose ', computer)
+        else:
+            print('You win! Rock stronk computer bad')
+    elif challenger == 'Paper':
+        if computer == 'Scissors':
+            print('You lose! computer CHOP CHOP', player)
+            print('computer chose ', computer)
+        else:
+            print('You win!', player ,'Roschambo champion')
+    elif challenger == 'Scissors':
+        if computer == 'Rock':
+            print('You lose! Computer BONK', player)
+            print('computer chose ', computer)
+        else:
+            print('You win! Computer destroyed')
+    elif challenger == 'End':
+        challenger_mode = False
+    else:
+        print('ERROR, ERROR. Check spelling and try again')
+print(computer, 'had')
+print('Have a nice day')
